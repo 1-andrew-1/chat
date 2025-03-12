@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 fab97b9ec8c05dc3997676bbbff9be77399c4385 Andrew nassar <andrewnassar117@gmail.com> 1741009456 +0200	commit (initial): Initial commit
+fab97b9ec8c05dc3997676bbbff9be77399c4385 0000000000000000000000000000000000000000 Andrew nassar <andrewnassar117@gmail.com> 1741009576 +0200	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 fab97b9ec8c05dc3997676bbbff9be77399c4385 Andrew nassar <andrewnassar117@gmail.com> 1741009576 +0200	Branch: renamed refs/heads/master to refs/heads/main
+fab97b9ec8c05dc3997676bbbff9be77399c4385 cf5daf2097da93b6a83bb35022a008b1927d2c07 Andrew nassar <andrewnassar117@gmail.com> 1741009664 +0200	pull origin main --rebase (start): checkout cf5daf2097da93b6a83bb35022a008b1927d2c07
+cf5daf2097da93b6a83bb35022a008b1927d2c07 638df2c77930eb711a072a6dc1d98336828f1707 Andrew nassar <andrewnassar117@gmail.com> 1741010097 +0200	commit: save a copy
+638df2c77930eb711a072a6dc1d98336828f1707 557018d5acc4bccecc3f221ba4484948ef581ff6 Andrew nassar <andrewnassar117@gmail.com> 1741177211 +0200	rebase (continue): Initial commit
+557018d5acc4bccecc3f221ba4484948ef581ff6 557018d5acc4bccecc3f221ba4484948ef581ff6 Andrew nassar <andrewnassar117@gmail.com> 1741177212 +0200	rebase (finish): returning to refs/heads/main

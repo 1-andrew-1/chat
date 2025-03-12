@@ -1,0 +1,21 @@
+{
+    "Welcome_Screen_text1": "Bienvenue sur ChatApp",
+    "Welcome_Screen_privacy_text": "Lisez notre politique de confidentialité. Appuyez sur \"Accepter et continuer\" pour accepter les conditions d'utilisation.",
+    "Welcome_Screen_button": "Accepter et continuer",
+    "PhoneAuthScreen_text1": "Commencer.",
+    "PhoneAuthScreen_text2": "NUMÉRO DE TÉLÉPHONE",
+    "PhoneAuthScreen_text3": "OTP envoyé avec succès!",
+    "PhoneAuthScreen_button": "Envoyer OTP",
+    "OTPVerificationPage_title": "Code de vérification",
+    "OTPVerificationPage_text": "Nous vous avons envoyé un code\nVeuillez l'entrer ci-dessous",
+    "OTPVerificationPage_text1": "Cela nous aide à vérifier chaque utilisateur de notre marketplace",
+    "OTPVerificationPage_text2": "Vous n'avez pas reçu de code?",
+    "OTPVerificationPage_text3": "✅ Vérification réussie! Redirection vers l'accueil...",
+    "OTPVerificationPage_text4": "Confirmer",
+    "ProfileSetupScreen_text": "Configurons votre profil.",
+    "ProfileSetupScreen_text1": "IMAGE DE PROFIL",
+    "ProfileSetupScreen_button": "Parcourir",
+    "ProfileSetupScreenfirst_name_text": "Prénom",
+    "ProfileSetupScreenlast_name_text": "Nom de famille",
+    "ProfileSetupScreen_text_button": "Terminer l'installation"
+}

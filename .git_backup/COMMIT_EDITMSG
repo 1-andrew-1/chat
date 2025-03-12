@@ -1,0 +1,153 @@
+Initial commit
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# interactive rebase in progress; onto cf5daf2
+# Last command done (1 command done):
+#    pick fab97b9 Initial commit
+# No commands remaining.
+# You are currently editing a commit while rebasing branch 'main' on 'cf5daf2'.
+#
+# Changes to be committed:
+#	deleted:    .gitignore
+#	deleted:    .metadata
+#	deleted:    analysis_options.yaml
+#	deleted:    android/.gitignore
+#	deleted:    android/app/build.gradle
+#	deleted:    android/app/google-services.json
+#	deleted:    android/app/src/debug/AndroidManifest.xml
+#	deleted:    android/app/src/main/AndroidManifest.xml
+#	deleted:    android/app/src/main/kotlin/com/example/chatapp/MainActivity.kt
+#	deleted:    android/app/src/main/res/drawable-v21/launch_background.xml
+#	deleted:    android/app/src/main/res/drawable/launch_background.xml
+#	deleted:    android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+#	deleted:    android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+#	deleted:    android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+#	deleted:    android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+#	deleted:    android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+#	deleted:    android/app/src/main/res/values-night/styles.xml
+#	deleted:    android/app/src/main/res/values/styles.xml
+#	deleted:    android/app/src/profile/AndroidManifest.xml
+#	deleted:    android/build.gradle
+#	deleted:    android/gradle.properties
+#	deleted:    android/gradle/wrapper/gradle-wrapper.properties
+#	deleted:    android/settings.gradle
+#	deleted:    assets/images/1.webp
+#	deleted:    assets/images/AVA.jpeg
+#	deleted:    assets/images/Camera.png
+#	deleted:    assets/images/Pope Kyrillos.jpeg
+#	deleted:    assets/images/Setting.png
+#	deleted:    assets/images/call.png
+#	deleted:    assets/images/chat.png
+#	deleted:    devtools_options.yaml
+#	deleted:    ios/.gitignore
+#	deleted:    ios/Flutter/AppFrameworkInfo.plist
+#	deleted:    ios/Flutter/Debug.xcconfig
+#	deleted:    ios/Flutter/Release.xcconfig
+#	deleted:    ios/Runner.xcodeproj/project.pbxproj
+#	deleted:    ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+#	deleted:    ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+#	deleted:    ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+#	deleted:    ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme
+#	deleted:    ios/Runner.xcworkspace/contents.xcworkspacedata
+#	deleted:    ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+#	deleted:    ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+#	deleted:    ios/Runner/AppDelegate.swift
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json
+#	deleted:    ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png
+#	deleted:    ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png
+#	deleted:    ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png
+#	deleted:    ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md
+#	deleted:    ios/Runner/Base.lproj/LaunchScreen.storyboard
+#	deleted:    ios/Runner/Base.lproj/Main.storyboard
+#	deleted:    ios/Runner/Info.plist
+#	deleted:    ios/Runner/Runner-Bridging-Header.h
+#	deleted:    ios/RunnerTests/RunnerTests.swift
+#	deleted:    lib/controller/a
+#	deleted:    lib/controller/chat/a
+#	deleted:    lib/controller/chat/cubit/chat_cubit.dart
+#	deleted:    lib/controller/chat/cubit/chat_state.dart
+#	deleted:    lib/controller/contacts/A
+#	deleted:    lib/controller/contacts/cubit/contacts_cubit.dart
+#	deleted:    lib/controller/contacts/cubit/contacts_state.dart
+#	deleted:    lib/controller/cubit/cubit/shared_preferences_cubit.dart
+#	deleted:    lib/controller/cubit/cubit/shared_preferences_state.dart
+#	deleted:    lib/controller/cubit/pages/page_controller_cubit.dart
+#	deleted:    lib/controller/cubit/pages/page_controller_state.dart
+#	deleted:    lib/controller/cubit/select numbet code/cubit/selectnumbercode_cubit.dart
+#	deleted:    lib/controller/cubit/select numbet code/cubit/selectnumbercode_state.dart
+#	deleted:    lib/core/services/cubit/auth_cubit.dart
+#	deleted:    lib/core/services/cubit/auth_state.dart
+#	deleted:    lib/generated/intl/messages_all.dart
+#	deleted:    lib/generated/intl/messages_ar.dart
+#	deleted:    lib/generated/intl/messages_de.dart
+#	deleted:    lib/generated/intl/messages_en.dart
+#	deleted:    lib/generated/intl/messages_es.dart
+#	deleted:    lib/generated/intl/messages_fr.dart
+#	deleted:    lib/generated/l10n.dart
+#	deleted:    lib/l10n/intl_ar.arb
+#	deleted:    lib/l10n/intl_de.arb
+#	deleted:    lib/l10n/intl_en.arb
+#	deleted:    lib/l10n/intl_es.arb
+#	deleted:    lib/l10n/intl_fr.arb
+#	deleted:    lib/main.dart
+#	deleted:    lib/views/screens/chat/chat_page.dart
+#	deleted:    lib/views/screens/home/homeseceen.dart
+#	deleted:    lib/views/screens/searching/searching.dart
+#	deleted:    lib/views/screens/setting/setting.dart
+#	deleted:    lib/views/screens/splashviews/otp_verfication_page.dart
+#	deleted:    lib/views/screens/splashviews/phone_auth_screen.dart
+#	deleted:    lib/views/screens/splashviews/profile_setup_screen.dart
+#	deleted:    lib/views/screens/splashviews/test_.dart
+#	deleted:    lib/views/screens/splashviews/welcome_screen.dart
+#	deleted:    lib/views/screens/splashviews/widget/input_phone_number.dart
+#	deleted:    lib/views/themes/dark_theme.dart
+#	deleted:    lib/views/themes/light_themes.dart
+#	deleted:    lib/views/widgets/app_bar_chat_screen.dart
+#	deleted:    lib/views/widgets/botton_navigation_bar.dart
+#	deleted:    lib/views/widgets/chat_card.dart
+#	deleted:    lib/views/widgets/chat_input_field.dart
+#	deleted:    lib/views/widgets/custom_button.dart
+#	deleted:    lib/views/widgets/custom_page_route.dart
+#	deleted:    lib/views/widgets/custom_profile_button.dart
+#	deleted:    lib/views/widgets/custom_text.dart
+#	deleted:    lib/views/widgets/dark_light_mode.dart
+#	deleted:    lib/views/widgets/log_out_button.dart
+#	deleted:    lib/views/widgets/profile_button_icon.dart
+#	deleted:    lib/views/widgets/profile_card.dart
+#	deleted:    lib/views/widgets/select_language_button.dart
+#	deleted:    lib/views/widgets/sizeconig.dart
+#	deleted:    pubspec.lock
+#	deleted:    pubspec.yaml
+#	deleted:    test/widget_test.dart
+#
+# Untracked files:
+#	.gitignore
+#	.metadata
+#	analysis_options.yaml
+#	android/
+#	assets/
+#	devtools_options.yaml
+#	ios/
+#	lib/
+#	pubspec.lock
+#	pubspec.yaml
+#	test/
+#
