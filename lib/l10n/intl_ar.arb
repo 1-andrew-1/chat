@@ -1,0 +1,24 @@
+{
+    "Welcome_Screen_text1": "مرحبًا بك في ChatApp",
+    "Welcome_Screen_privacy_text": "اقرأ سياسة الخصوصية. اضغط على \"موافقة ومتابعة\" لقبول شروط الخدمة.",
+    "Welcome_Screen_button": "موافقة ومتابعة",
+
+    "PhoneAuthScreen_text1": "لنبدأ.",
+    "PhoneAuthScreen_text2": "رقم الهاتف",
+    "PhoneAuthScreen_text3": "تم إرسال رمز OTP بنجاح!",
+    "PhoneAuthScreen_button": "إرسال OTP",
+
+    "OTPVerificationPage_title": "رمز التحقق",
+    "OTPVerificationPage_text": "لقد أرسلنا لك رمزًا\nالرجاء إدخاله أدناه",
+    "OTPVerificationPage_text1": "يساعدنا هذا في التحقق من كل مستخدم في منصتنا",
+    "OTPVerificationPage_text2": "لم تستلم الرمز؟",
+    "OTPVerificationPage_text3": "✅ تم التحقق بنجاح! جارٍ التوجيه إلى الصفحة الرئيسية...",
+    "OTPVerificationPage_text4": "تأكيد",
+
+    "ProfileSetupScreen_text": "لنقم بإعداد ملفك الشخصي.",
+    "ProfileSetupScreen_text1": "صورة الملف الشخصي",
+    "ProfileSetupScreen_button": "تصفح",
+    "ProfileSetupScreenfirst_name_text": "الاسم الأول",
+    "ProfileSetupScreenlast_name_text": "اسم العائلة",
+    "ProfileSetupScreen_text_button": "إكمال الإعداد"
+}

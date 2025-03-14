@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "359577288865",
+    "project_id": "fir-951d2",
+    "storage_bucket": "fir-951d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359577288865:android:871721e4ad116a1dc670e0",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359577288865-4lqevb3vvahfk0i6iav8uatmu8sfkvia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatapp",
+            "certificate_hash": "ae356154ae51f96f65931ab92715baecc331093e"
+          }
+        },
+        {
+          "client_id": "359577288865-nfors1ese8lj060rl3h8ddi96i93p55p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkZ1UmkDssyne2rfBSFmtr48M9BkNriio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359577288865-nfors1ese8lj060rl3h8ddi96i93p55p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "359577288865-l2k8gman6vl8v83o89dhv7gbtsmus8p7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.furitshop"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
