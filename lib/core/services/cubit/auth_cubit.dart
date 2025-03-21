@@ -90,7 +90,7 @@ class AuthCubit extends Cubit<AuthState> {
     try {
       DocumentReference userRef = firestore.collection("users").doc(userId);
       DocumentSnapshot userSnapshot = await userRef.get();
-
+      Constants.is_exists = userSnapshot.exists;
       if (userSnapshot.exists) {
         // Update login time
         saveUserData("andrew", userId, phoneNumber);

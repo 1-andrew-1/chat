@@ -37,13 +37,11 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // زر اختيار اللغة
             Builder(
               builder: (context) => const SelectLanguageButton(),
             ),
             const SizedBox(height: 20),
 
-            // زر الموافقة والمتابعة
             CustomButtonAuth(
               onPressed: () {
                 navigateTo(context, const PhoneAuthScreen());

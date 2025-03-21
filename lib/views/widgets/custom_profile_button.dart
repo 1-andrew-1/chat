@@ -8,9 +8,7 @@ class CustomProfileButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        print("Account button tapped!"); // Replace with your action
-      },
+      onTap: callback,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         child: Row(
