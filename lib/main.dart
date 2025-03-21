@@ -1,3 +1,4 @@
+import 'package:chatapp/controller/delete_message.dart';
 import 'package:chatapp/controller/users%20status/chat_contact_cubit.dart';
 import 'package:chatapp/controller/sharedpref/shared_preferences_cubit.dart';
 import 'package:chatapp/controller/cubit_unsing/pages/page_controller_cubit.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => SharedPreferencesCubit()..loadUid()),
         BlocProvider(create: (context) => AuthCubit()),
         BlocProvider(create: (context) => SelectnumbercodeCubit()),
+        BlocProvider(create: (context) => DeleteMessageCubit()),
       ],
       child: BlocBuilder<SharedPreferencesCubit, SharedPreferencesState>(
         builder: (context, state) {
@@ -67,4 +69,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 

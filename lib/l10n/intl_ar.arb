@@ -20,5 +20,13 @@
     "ProfileSetupScreen_button": "تصفح",
     "ProfileSetupScreenfirst_name_text": "الاسم الأول",
     "ProfileSetupScreenlast_name_text": "اسم العائلة",
-    "ProfileSetupScreen_text_button": "إكمال الإعداد"
+    "ProfileSetupScreen_text_button": "إكمال الإعداد" ,
+
+    "deleteForMe": "حذف لي فقط",
+  "deleteForEveryone": "حذف للجميع",
+  "deleteConfirmation": "تأكيد الحذف",
+  "deleteMessage": "هل أنت متأكد أنك تريد {deleteType}؟",
+  "cancel": "إلغاء",
+  "confirmDelete": "نعم، احذف",
+  "deletedMessage": "{deleteType} تم الحذف"
 }

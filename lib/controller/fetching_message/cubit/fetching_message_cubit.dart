@@ -13,31 +13,30 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
   FetchingMessageCubit() : super(FetchingMessageInitial());
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  StreamSubscription<List<MessageModel>>? _messageSubscription;
+  StreamSubscription<List<FetchMessageModel>>? _messageSubscription;
   final ScrollController scrollController = ScrollController();
 
   void scrollToBottom() {
-  WidgetsBinding.instance.addPostFrameCallback((_) {
-    if (!scrollController.hasClients ) return; // Ensure controller is valid
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!scrollController.hasClients) return;
 
-    final currentPosition = scrollController.position.pixels;
-    final maxScroll = scrollController.position.maxScrollExtent;
+      final currentPosition = scrollController.position.pixels;
+      final maxScroll = scrollController.position.maxScrollExtent;
 
-    if (currentPosition < maxScroll) { // Scroll only if needed
-      scrollController.animateTo(
-        maxScroll + 50,
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.easeOutBack,
-      );
-    }
-  });
-}
-
+      if (currentPosition < maxScroll) {
+        scrollController.animateTo(
+          maxScroll + 50,
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeOutBack,
+        );
+      }
+    });
+  }
 
   void fetchMessages({required String receiverID}) {
     emit(FetchingMessageLoading());
 
-    Stream<List<MessageModel>> messageStream = _firestore
+    Stream<List<FetchMessageModel>> messageStream = _firestore
         .collection("users")
         .doc(Constants.userID)
         .collection("Chat")
@@ -45,11 +44,10 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
         .collection("Messages")
         .orderBy("date", descending: false)
         .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((doc) => MessageModel.fromJson(doc.data()))
-            .toList());
+        .map((snapshot) => snapshot.docs.map((doc) {
+              return FetchMessageModel.fromJson(doc.id, doc.data());
+            }).toList());
 
-    // Cancel previous subscription if active
     _messageSubscription?.cancel();
 
     _messageSubscription = messageStream.listen((messages) {
@@ -74,7 +72,6 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
     });
   }
 
-  /// 🔹 Download audio file from Firebase Storage
   Future<String?> downloadAudioFile(String audioUrl) async {
     try {
       final ref = FirebaseStorage.instance.refFromURL(audioUrl);
@@ -83,24 +80,22 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
       final file = File(filePath);
 
       if (await file.exists()) {
-        return filePath; // Return existing file
+        return filePath;
       }
 
-      await ref.writeToFile(file); // Download file
+      await ref.writeToFile(file);
       return filePath;
     } catch (e) {
       return null;
     }
   }
 
-  /// Stops listening to the stream when the user leaves the chat
   void stopListening() {
     _messageSubscription?.cancel();
     _messageSubscription = null;
     emit(FetchingMessageInitial());
   }
 
-  /// Marks all messages as read using batch processing for efficiency
   Future<void> markMessagesAsRead(String receiverID) async {
     final messagesRef = _firestore
         .collection("users")
@@ -117,7 +112,7 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
       for (var doc in unreadMessages.docs) {
         batch.update(doc.reference, {"isRead": true});
       }
-      await batch.commit(); // Perform batch update
+      await batch.commit();
     }
   }
 }

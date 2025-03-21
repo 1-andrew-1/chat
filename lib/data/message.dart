@@ -51,3 +51,49 @@ class MessageModel {
   String toString() =>
       'MessageModel(content: $content, date: $date, senderID: $senderID, isRead: $isRead, messageType: $messageType)';
 }
+class FetchMessageModel {
+  final String messageID;
+  final String content;
+  final DateTime date;
+  final String senderID;
+  final bool isRead;
+  final MessageType messageType;
+
+  FetchMessageModel({
+    required this.messageID,
+    required this.content,
+    required this.date,
+    required this.senderID,
+    this.isRead = false,
+    this.messageType = MessageType.text,
+  });
+
+  factory FetchMessageModel.fromJson(String id, Map<String, dynamic> data) {
+    return FetchMessageModel(
+      messageID: id,
+      content: data['content'] ?? '',
+      date: (data['date'] != null) ? (data['date'] as Timestamp).toDate() : DateTime.now(),
+      senderID: data['senderID'] ?? '',
+      isRead: data['isRead'] ?? false,
+      messageType: MessageType.values.firstWhere(
+        (e) => e.toString() == 'MessageType.${data['messageType']}',
+        orElse: () => MessageType.text,
+      ),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'messageID': messageID,
+      'content': content,
+      'date': Timestamp.fromDate(date),
+      'senderID': senderID,
+      'isRead': isRead,
+      'messageType': messageType.toString().split('.').last,
+    };
+  }
+
+  @override
+  String toString() =>
+      'FetchMessageModel(messageID: $messageID, content: $content, date: $date, senderID: $senderID, isRead: $isRead, messageType: $messageType)';
+}

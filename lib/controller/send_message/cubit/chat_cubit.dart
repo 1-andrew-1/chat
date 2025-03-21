@@ -115,10 +115,12 @@ class ChatCubit extends Cubit<ChatState> {
         .doc(Constants.userID)
         .collection("Chat")
         .doc(receiverID);
+
     await senderChatRef.set({"exists": true}, SetOptions(merge: true));
     await senderChatRef
         .collection("Messages")
         .add({...senderMessageMap, 'isRead': true}); // Sender sees as read
+        
     if (Constants.userID != receiverID) {
       DocumentReference receiverChatRef = fire
           .collection("users")

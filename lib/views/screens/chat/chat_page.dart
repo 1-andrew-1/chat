@@ -20,6 +20,7 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.read<FetchingMessageCubit>().markMessagesAsRead(receiverID);
     context.read<FetchingMessageCubit>().scrollToBottom();
     return Scaffold(
       appBar: AppBarChatScreen(
@@ -32,7 +33,6 @@ class ChatScreen extends StatelessWidget {
               builder: (context, state) {
                 if (state is FetchingMessageLoaded) {
                   final messages = state.messages;
-
                   if (messages.isNotEmpty) {
                     WidgetsBinding.instance.addPostFrameCallback((_) {
                       if (context.mounted) {
@@ -75,11 +75,13 @@ class ChatScreen extends StatelessWidget {
                           },
                         );
                       }
-
                       return MessageBubble(
+                        receivedid : receiverID ,
                         text: message.content,
                         isSent: isSent,
-                        time: message.date,
+                        time: message.date, 
+                        messageid: message.messageID, 
+                        senderid: message.senderID,
                       );
                     },
                   );

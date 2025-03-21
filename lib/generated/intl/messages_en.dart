@@ -20,6 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(deleteType) => "Are you sure you want to ${deleteType}?";
+
+  static String m1(deleteType) => "${deleteType} deleted";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "OTPVerificationPage_text": MessageLookupByLibrary.simpleMessage(
@@ -73,5 +77,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "Welcome_Screen_text1": MessageLookupByLibrary.simpleMessage(
       "Welcome to ChatApp",
     ),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "confirmDelete": MessageLookupByLibrary.simpleMessage("Yes, delete"),
+    "deleteConfirmation": MessageLookupByLibrary.simpleMessage(
+      "Delete Confirmation",
+    ),
+    "deleteForEveryone": MessageLookupByLibrary.simpleMessage(
+      "Delete for everyone",
+    ),
+    "deleteForMe": MessageLookupByLibrary.simpleMessage("Delete for me"),
+    "deleteMessage": m0,
+    "deletedMessage": m1,
   };
 }

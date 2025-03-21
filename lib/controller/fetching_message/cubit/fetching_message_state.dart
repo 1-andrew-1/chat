@@ -14,7 +14,7 @@ class FetchingMessageInitial extends FetchingMessageState {}
 class FetchingMessageLoading extends FetchingMessageState {}
 
 class FetchingMessageLoaded extends FetchingMessageState {
-  final List<MessageModel> messages;
+  final List<FetchMessageModel> messages;
   final int unreadCount ;
   final String lastMessage ;
   FetchingMessageLoaded( {required this.lastMessage,required this.messages , required this.unreadCount});

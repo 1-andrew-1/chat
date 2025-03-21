@@ -22,6 +22,14 @@
     "ProfileSetupScreen_button": "Browse",
     "ProfileSetupScreenfirst_name_text": "First name",
     "ProfileSetupScreenlast_name_text": "Last name",
-    "ProfileSetupScreen_text_button": "Complete setup"
+    "ProfileSetupScreen_text_button": "Complete setup",
+
+    "deleteForMe": "Delete for me",
+  "deleteForEveryone": "Delete for everyone",
+  "deleteConfirmation": "Delete Confirmation",
+  "deleteMessage": "Are you sure you want to {deleteType}?",
+  "cancel": "Cancel",
+  "confirmDelete": "Yes, delete",
+  "deletedMessage": "{deleteType} deleted"
     
 }

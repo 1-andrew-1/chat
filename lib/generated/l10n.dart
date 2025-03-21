@@ -244,6 +244,71 @@ class S {
       args: [],
     );
   }
+
+  /// `Delete for me`
+  String get deleteForMe {
+    return Intl.message(
+      'Delete for me',
+      name: 'deleteForMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete for everyone`
+  String get deleteForEveryone {
+    return Intl.message(
+      'Delete for everyone',
+      name: 'deleteForEveryone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Confirmation`
+  String get deleteConfirmation {
+    return Intl.message(
+      'Delete Confirmation',
+      name: 'deleteConfirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to {deleteType}?`
+  String deleteMessage(Object deleteType) {
+    return Intl.message(
+      'Are you sure you want to $deleteType?',
+      name: 'deleteMessage',
+      desc: '',
+      args: [deleteType],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
+  }
+
+  /// `Yes, delete`
+  String get confirmDelete {
+    return Intl.message(
+      'Yes, delete',
+      name: 'confirmDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{deleteType} deleted`
+  String deletedMessage(Object deleteType) {
+    return Intl.message(
+      '$deleteType deleted',
+      name: 'deletedMessage',
+      desc: '',
+      args: [deleteType],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
