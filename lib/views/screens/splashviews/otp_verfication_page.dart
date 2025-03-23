@@ -84,16 +84,22 @@ class OTPVerificationPage extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content:
                             Text(S.of(context).OTPVerificationPage_text3)));
-                    authCubit.saveUserToFirestore(state.uid, authCubit.phone);
-                    Future.delayed(const Duration(milliseconds: 1000), () {
+
+                    authCubit
+                        .saveUserToFirestore(state.uid, authCubit.phone)
+                        .then((_) {
                       sharedpre.islogin();
-                      // ignore: use_build_context_synchronously
                       navigateOffAll(
-                          context,
-                          BlocProvider(
-                            create: (context) => ChatContactCubit(),
-                            child: Constants.is_exists ? const HomeScreen() : const ProfileSetupScreen(),
-                          ));
+                        context,
+                        BlocProvider(
+                          create: (context) => ChatContactCubit(),
+                          child: Constants.is_exists
+                              ? const HomeScreen()
+                              : const ProfileSetupScreen(),
+                        ),
+                      );
+                    }).catchError((error) {
+                      print("Error saving user: $error");
                     });
                   } else if (state is AuthError) {
                     authCubit.otpSent = false;

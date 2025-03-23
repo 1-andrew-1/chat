@@ -34,6 +34,8 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
   }
 
   void fetchMessages({required String receiverID}) {
+    if (isClosed) return; // Prevent execution if the Cubit is closed
+
     emit(FetchingMessageLoading());
 
     Stream<List<FetchMessageModel>> messageStream = _firestore
@@ -48,13 +50,14 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
               return FetchMessageModel.fromJson(doc.id, doc.data());
             }).toList());
 
-    _messageSubscription?.cancel();
+    _messageSubscription?.cancel(); // Cancel previous subscription before assigning a new one
 
     _messageSubscription = messageStream.listen((messages) {
+      if (isClosed) return; // Check if Cubit is closed before emitting
+
       if (messages.isNotEmpty) {
         final unreadCount = messages.where((msg) => !msg.isRead).length;
         final lastMessage = messages.last.content;
-
         emit(FetchingMessageLoaded(
           messages: messages,
           unreadCount: unreadCount,
@@ -68,6 +71,7 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
         ));
       }
     }, onError: (error) {
+      if (isClosed) return; // Ensure we don't emit after close
       emit(FetchingMessageError(errorMessage: error.toString()));
     });
   }
@@ -93,10 +97,15 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
   void stopListening() {
     _messageSubscription?.cancel();
     _messageSubscription = null;
-    emit(FetchingMessageInitial());
+
+    if (!isClosed) {
+      emit(FetchingMessageInitial()); // Check if Cubit is still active
+    }
   }
 
   Future<void> markMessagesAsRead(String receiverID) async {
+    if (isClosed) return; // Prevent execution if the Cubit is closed
+
     final messagesRef = _firestore
         .collection("users")
         .doc(Constants.userID)
@@ -114,5 +123,12 @@ class FetchingMessageCubit extends Cubit<FetchingMessageState> {
       }
       await batch.commit();
     }
+  }
+
+  @override
+  Future<void> close() {
+    _messageSubscription?.cancel(); // Cancel subscription when closing
+    scrollController.dispose(); // Dispose scroll controller
+    return super.close();
   }
 }

@@ -54,6 +54,7 @@ dependencies:
   record: ^5.2.1
   just_audio: ^0.9.46
   awesome_dialog: ^3.2.1
+  flutter_local_notifications: ^19.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

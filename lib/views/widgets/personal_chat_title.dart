@@ -1,4 +1,5 @@
 import 'package:chatapp/controller/fetching_message/cubit/fetching_message_cubit.dart';
+import 'package:chatapp/controller/notification/cubit/notification_cubit.dart';
 import 'package:chatapp/controller/send_message/cubit/chat_cubit.dart';
 import 'package:chatapp/core/constants/constants.dart';
 import 'package:chatapp/views/screens/chat/chat_page.dart';
@@ -19,6 +20,14 @@ class PersonalChatTitle extends StatelessWidget {
   final int unreadCount;
   @override
   Widget build(BuildContext context) {
+    print(subtitle);
+    if (unreadCount > 0) {
+      context.read<NotificationCubit>().showNotification(
+          senderID: Constants.userID,
+          body: subtitle,
+          title: title,
+          payload: UID);
+    }
     return ListTile(
       leading: const CircleAvatar(
         radius: 24,
@@ -31,11 +40,25 @@ class PersonalChatTitle extends StatelessWidget {
       ),
       subtitle: SizedBox(
         width: MediaQuery.of(context).size.width - 50, // Adjust as needed
-        child: Text(
-          subtitle,
-          style: const TextStyle(fontSize: 14, color: Colors.grey),
-          overflow: TextOverflow.ellipsis, // Adds "..." if the text is too long
-          maxLines: 1, // Limits to one line
+        child: RichText(
+          text: TextSpan(
+            style: const TextStyle(fontSize: 14, color: Colors.grey),
+            children: [
+              if (subtitle.contains("https://firebasestorage.googleapis.com"))
+                const WidgetSpan(
+                  alignment: PlaceholderAlignment.middle,
+                  child: Icon(Icons.mic,
+                      size: 16, color: Colors.grey), // Mic icon first
+                ),
+              if (!subtitle.contains("https://firebasestorage.googleapis.com"))
+                TextSpan(text: subtitle) // Show text normally
+              else
+                const TextSpan(
+                    text: " Voice Message"), // Optional text after mic
+            ],
+          ),
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
         ),
       ),
       trailing: Visibility(
@@ -62,7 +85,8 @@ class PersonalChatTitle extends StatelessWidget {
             MultiBlocProvider(
               providers: [
                 BlocProvider(
-                  create: (context) => FetchingMessageCubit()..fetchMessages(receiverID: UID),
+                  create: (context) =>
+                      FetchingMessageCubit()..fetchMessages(receiverID: UID),
                 ),
                 BlocProvider(
                   create: (context) => ChatCubit()..init(receiverID: UID),

@@ -1,4 +1,5 @@
 import 'package:chatapp/controller/delete_message.dart';
+import 'package:chatapp/controller/notification/cubit/notification_cubit.dart';
 import 'package:chatapp/controller/users%20status/chat_contact_cubit.dart';
 import 'package:chatapp/controller/sharedpref/shared_preferences_cubit.dart';
 import 'package:chatapp/controller/cubit_unsing/pages/page_controller_cubit.dart';
@@ -23,7 +24,7 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
+  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => AuthCubit()),
         BlocProvider(create: (context) => SelectnumbercodeCubit()),
         BlocProvider(create: (context) => DeleteMessageCubit()),
+        BlocProvider(create: (context) => NotificationCubit()),
       ],
       child: BlocBuilder<SharedPreferencesCubit, SharedPreferencesState>(
         builder: (context, state) {
@@ -48,6 +50,7 @@ class MyApp extends StatelessWidget {
           final bool isLogin = (state is ThemeUpdate) ? state.islogin : false;
 
           return MaterialApp(
+            navigatorKey: navigatorKey,  // Assign global navigator key
             supportedLocales: const [
               Locale('en'), Locale('ar'), Locale('fr'), Locale('es'), Locale('de'),
             ],
@@ -60,9 +63,9 @@ class MyApp extends StatelessWidget {
             locale: Locale(local),
             debugShowCheckedModeBanner: false,
             theme: isDark ? DarkTheme.theme : LightTheme.theme,
-            home: isLogin
-                ? BlocProvider(create: (context) => ChatContactCubit(), child: const HomeScreen())
-                : const WelcomeScreen(),
+             home: isLogin
+                 ? BlocProvider(create: (context) => ChatContactCubit(), child: const HomeScreen())
+              : const WelcomeScreen(),
           );
         },
       ),
