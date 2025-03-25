@@ -23,7 +23,7 @@ A real-time chat application built with Flutter, enabling seamless messaging, vo
 - **Local Storage**: SQLite, SharedPreferences
 - **State Management**: Cubit/BLoC
 
-## Screenshots 📸
+## Screen 📸
 
 📍 **Chat Screen**  
 📍 **Voice Message Recording**  
