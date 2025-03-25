@@ -1,24 +1,35 @@
-# Chat Application
+# Chat App 💬
 
-A real-time chat application developed using Flutter and Firebase.
+A real-time chat application built with Flutter, enabling seamless messaging, voice messaging, and notifications.
 
-## Features
+## Features ✨
 
-- **Real-time Messaging:** Send and receive messages instantly.
-- **User Authentication:** Supports phone number login using Firebase.
-- **Contacts Management:**
-  - Load contacts.
-  - Register new contacts.
-  - Handle unregistered contacts.
-- **Voice Messages:** Record and send audio messages.
-- **Notifications:** Receive real-time notifications for new messages and voice recordings.
-- **Language Support:** Allows users to change the app's language.
-- **Local Storage:** Uses `SharedPreferences` for storing user preferences.
-- **State Management:** Implements `Cubit` for efficient state handling.
-- **Dark & Light Mode:** Supports theme switching.
+- **Real-Time Messaging** 📨 – Instantly send and receive messages.
+- **Voice Messages** 🎙️ – Record and send voice messages.
+- **Notifications** 🔔 – Get notified for new messages.
+- **Contacts Management** 📇 – Load, register, and manage contacts.
+- **Multi-Language Support** 🌍 – Switch between languages easily.
+- **Number Login** 📱 – Secure authentication using phone numbers.
+- **Local Storage** 💾 – Uses SQLite for data persistence.
+- **Cloud Sync** ☁️ – Firebase integration for real-time updates.
 
-## Installation
+## Folder Structure 🗂️
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/1-andrew-1/chat.git
+
+## Tech Stack 🛠️
+
+- **Frontend**: Flutter (Dart)
+- **Backend**: Firebase (Firestore, Storage, Authentication)
+- **Local Storage**: SQLite, SharedPreferences
+- **State Management**: Cubit/BLoC
+
+## Screenshots 📸
+
+📍 **Chat Screen**  
+📍 **Voice Message Recording**  
+📍 **Contact List**  
+📍 **Notifications**  
+📍 **Language Switching**  
+
+---
+
