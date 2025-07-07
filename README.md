@@ -23,6 +23,9 @@ A real-time chat application built with Flutter, enabling seamless messaging, vo
 - **Local Storage**: SQLite, SharedPreferences
 - **State Management**: Cubit/BLoC
 
+## 🎥 Demo Video
+
+📽️ [Watch the demo video on Google Drive](https://drive.google.com/file/d/1ZmgyMDtzkkKtBdAiuKsIyzzgnd_4Xsn6/view?usp=drive_link)
 
 
 ---
